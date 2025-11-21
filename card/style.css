@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* ---------- Global Styles ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f0f2f8;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeInBg 2s ease forwards;
+}
+
+@keyframes fadeInBg {
+    from { background: #e5e8ee; }
+    to { background: #f0f2f8; }
+}
+
+/* ---------- Wrapper ---------- */
+.wrapper {
+    perspective: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.wrapper:hover .profile-card {
+    transform: rotateX(7deg) rotateY(-7deg);
+}
+
+/* ---------- Profile Card ---------- */
+.profile-card {
+    width: 380px;
+    max-width: 95%;
+    padding-bottom: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    transform: translateY(40px) scale(0.9);
+    opacity: 0;
+    animation: cardEnter 1.8s ease forwards;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+@keyframes cardEnter { to { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* ---------- Header Gradient ---------- */
+.header-gradient {
+    height: 120px;
+    background: linear-gradient(135deg, #4e73df, #364fc7, #5a8dee);
+    background-size: 300% 300%;
+    animation: gradientFlow 6s ease infinite;
+}
+@keyframes gradientFlow { 0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;} }
+
+/* ---------- Avatar ---------- */
+.avatar-container {
+    margin-top: -65px; /* moves container up above card slightly */
+}
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    opacity: 0;
+    animation: avatarPop 1.5s ease forwards 0.4s;
+}
+@keyframes avatarPop { to { transform: scale(1); opacity: 1; } }
+
+/* ---------- Text ---------- */
+.name, .role, .location {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeSlide 1.2s ease forwards;
+}
+.name { animation-delay: 1s; font-size: 1.6rem; font-weight: 700; color: #1c2331; margin-top: 15px; }
+.role { animation-delay: 1.4s; font-size: 0.95rem; background:#e8ecff; color:#3046d8; padding:6px 14px; border-radius:14px; display:inline-block; margin-top:10px; }
+.location { animation-delay: 1.8s; margin-top: 18px; font-size:0.95rem; color:#4b5d78; display:flex; align-items:center; justify-content:center; gap:6px; }
+@keyframes fadeSlide { to { opacity:1; transform:translateY(0); } }
+
+/* ---------- Location Icon ---------- */
+.loc-icon { animation: pulse 0.5s infinite ease-in-out; }
+@keyframes pulse { 0%{transform:scale(1);opacity:0.8;}50%{transform:scale(1.25);opacity:1;}100%{transform:scale(1);opacity:0.8;} }
+
+/* ---------- Social Icons ---------- */
+.socials { margin-top:25px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+.icon { padding:10px 14px; background:#f4f6ff; border-radius:10px; text-decoration:none; font-size:0.9rem; font-weight:500; color:#475279; transition:all 0.3s ease; }
+.icon:hover { transform:translateY(-3px); background:#e7ebff; }
+
+/* ---------- CTA Button ---------- */
+.btn-contact { margin-top:28px; padding:12px 40px; background:#4e73df; border:none; color:#fff; font-size:1rem; font-weight:600; border-radius:25px; cursor:pointer; transition:all 0.35s ease; box-shadow:0 8px 20px rgba(78,115,223,0.25); }
+.btn-contact:hover { background:#2c49c7; transform:translateY(-4px); box-shadow:0 12px 26px rgba(78,115,223,0.35); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+    .profile-card { width: 90%; padding-bottom:20px; }
+    .avatar { width:100px; height:100px; }
+    .name { font-size:1.3rem; margin-top:10px; }
+    .role { font-size:0.85rem; padding:4px 10px; }
+    .btn-contact { padding:10px 30px; font-size:0.9rem; }
+    .socials { gap:8px; }
+}
