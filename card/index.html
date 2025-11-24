@@ -3,22 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Card</title>
+<title>Premium Portfolio Card</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Background animated grid -->
+<div class="background-grid"></div>
+
+<!-- Main wrapper for 3D perspective -->
 <div class="wrapper">
     <div class="profile-card">
+        <!-- Header gradient -->
         <div class="header-gradient"></div>
 
-        <div class="avatar-container">
-            <img class="avatar" src="images/photo.jpg" alt="Fidele Elock Sadrack">
-        </div>
+        <!-- Profile avatar -->
+        <img class="avatar" src="p4.jpg" alt="Fidele Elock Sadrack">
 
-        <h2 class="name">Fidele Elock Sadrack</h2>
-        <p class="role">FullStack Web Developer</p>
+        <!-- Name animated -->
+        <h2 class="name" id="animated-name"></h2>
 
+        <!-- Role animated -->
+        <p class="role" id="animated-role">Full Stack Developer</p>
+
+        <!-- Location -->
         <div class="location">
             <svg class="loc-icon" width="14" height="14" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" fill="#3046d8"/>
@@ -26,16 +34,24 @@
             Douala, Cameroon
         </div>
 
+        <!-- Social links -->
         <div class="socials">
             <a href="https://www.github.com/Hunter13-cmr" class="icon github">GitHub</a>
             <a href="https://www.linkedin.com/in/esf1305" class="icon linkedin">LinkedIn</a>
         </div>
 
+        <!-- Contact button -->
         <a href="mailto:felocksadrack@gmail.com">
-            <button class="btn-contact">Hire Me</button>
+            <button class="btn-contact">
+                <span class="moving-text">Hire Me</span>
+            </button>
         </a>
+
+        <!-- Theme toggle button -->
+        <button class="theme-toggle">🌙</button>
     </div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
