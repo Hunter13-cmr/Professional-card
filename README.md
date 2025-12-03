@@ -1,7 +1,6 @@
 # 🌟 Portfolio Card Project
 
-A modern, elegant, and animated **Portfolio Card** built using **HTML5**
-and **CSS3**, designed to showcase a developer's profile with style and
+A modern, elegant, and animated **Portfolio Card** built using **HTML5**, **CSS3** and **JavaScript**, designed to showcase a developer's profile with style and
 professionalism.\
 This project features smooth animations, 3D hover effects, and a clean
 minimalist design suitable for portfolios, landing pages, and personal
@@ -158,7 +157,9 @@ FullStack Developer\
 📍 Douala, Cameroon
 
 🔗 **GitHub:** https://github.com/Hunter13-cmr\
+
 🔗 **LinkedIn:** https://linkedin.com/in/esf1305\
+
 📧 **Email:** felocksadrack@gmail.com
 
 ------------------------------------------------------------------------
